@@ -1,0 +1,259 @@
+/* style.css */
+
+/* Réinitialisation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Corps */
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  color: #333;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+/* En-tête */
+header {
+    background-color: #4CAF50 !important; /* Vert moderne */
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav ul li a {
+    color: rgb(14, 239, 119);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ffeb3b; /* Jaune au survol */
+}
+
+
+
+/* Contenu principal */
+main {
+  flex: 1;
+  padding: 20px;
+}
+h1 {
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Formulaires */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #45a049; /* Vert plus foncé */
+}
+
+/* Tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Statistiques */
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.stat-card p {
+    color: rgb(217, 47, 25);
+    font-weight:900;
+    font-size: 27px;
+}
+
+/* Autres styles */
+.select2-container {
+  width: 100%;
+}
+
+/* Boutons d'actions */
+button[name="marquer_arrivee"],
+button[name="marquer_livree"],
+button[name="marquer_retourne"] {
+    background-color: #ff9800; /* Orange */
+    margin: 2px;
+}
+button[name="marquer_arrivee"]:hover,
+button[name="marquer_livree"]:hover {
+    background-color: #f57c00; /* Orange plus foncé */
+}
+
+button[name="marquer_retourne"] {
+    background-color: #f44336; /* Rouge */
+}
+
+button[name="marquer_retourne"]:hover {
+    background-color: #d32f2f; /* Rouge plus foncé */
+}
+/* Formulaire de paiement additionnel */
+form[method="POST"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+    justify-items: center; /* Centre les éléments horizontalement dans chaque cellule */
+    align-items: center; /* Centre les éléments verticalement dans chaque cellule */
+  }
+  
+  form[method="POST"] > * {
+    text-align: center; /* Centre le texte à l'intérieur de chaque élément */
+  }
+  
+  form[method="POST"] input[type="number"] {
+    width: 100%;
+  }
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Effets au survol */
+button, input[type="submit"], input[type="button"] {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/*Styles pour la liste des produits */
+
+ ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+ul li strong {
+    font-size: 18px;
+    color: #4CAF50;
+}
+
+ul li p {
+    margin: 10px 0 0;
+    color: #666;
+}
